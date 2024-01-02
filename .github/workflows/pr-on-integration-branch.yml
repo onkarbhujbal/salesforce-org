@@ -86,8 +86,8 @@ jobs:
               shell: bash
               run: |
                   echo "inside Populate auth file with SFDX_URL action "
-                  echo ${{ secrets.LUI_QA_SFDX_INTEGRATION_URL}}
-                  echo ${{ secrets.LUI_QA_SFDX_INTEGRATION_URL}} > ./SFDX_INTEGRATION_URL.txt
+                  echo ${{ secrets.LUIQA_SFDX_INTEGRATION_URL}}
+                  echo ${{ secrets.LUIQA_SFDX_INTEGRATION_URL}} > ./SFDX_INTEGRATION_URL.txt
 
             # Authenticate to org using the URL stored in the text file
             - name: 'Authenticate to Integration Org'
