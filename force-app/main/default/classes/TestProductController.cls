@@ -1,7 +1,7 @@
 @isTest
 public class TestProductController {
     @testSetup
-    static void createProducts() {
+    static void createProducts() { //test
         List<Product__c> products = new List<Product__c>();
 
         products.add(
