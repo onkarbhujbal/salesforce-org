@@ -32,10 +32,10 @@ jobs:
 
       - name:  Run PMD Scanner
         run: |
-           sf scanner run --target force-app --outfile results.html
-           ls -al
+           sf scanner run --target force-app --outfile --help
+           sf scanner run --target force-app --outfile results.html 
 
-      - name: Upload OWASP reports
+      - name: Upload PMD Scanner reports
         uses: actions/upload-artifact@v4
         with:
           name: pmd-report
