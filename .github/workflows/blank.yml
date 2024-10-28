@@ -29,14 +29,15 @@ jobs:
                 echo "github path is : ${GITHUB_PATH}"
                 sf --version
                 
-      - uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin' # See 'Supported distributions' for available options
-          java-version: '21'
 
-      - name:  Setup PMD Scanner
+      - name:  Run PMD Scanner
         run: |
-           #sf plugins install @salesforce/sfdx-scanner.
-           sf scanner run
-           sf scanner run dfa
+           sf scanner run --target force-app --outfile results.html
+           ls -al
+
+      - name: Upload OWASP reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: pmd-report
+          path: ./results.html
         
