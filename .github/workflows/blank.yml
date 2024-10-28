@@ -28,7 +28,7 @@ jobs:
                 echo "path is : ${PATH}"
                 echo "github path is : ${GITHUB_PATH}"
                 sf --version
-                sf plugins install @salesforce/sfdx-scanner.
+                
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
@@ -36,6 +36,7 @@ jobs:
 
       - name:  Setup PMD Scanner
         run: |
-           sf plugins install @salesforce/sfdx-scanner.
+           #sf plugins install @salesforce/sfdx-scanner.
            sf scanner run
+           sf scanner run dfa
         
