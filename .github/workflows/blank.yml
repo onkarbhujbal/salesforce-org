@@ -33,7 +33,7 @@ jobs:
       - name:  Run PMD Scanner
         run: |
            sf scanner run --target force-app --outfile --help
-           sf scanner run --target force-app --outfile results.html 
+           sf scanner run --target force-app --outfile results.html results.csv
 
       - name: Upload PMD Scanner reports
         uses: actions/upload-artifact@v4
