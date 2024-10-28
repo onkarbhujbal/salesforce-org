@@ -28,6 +28,11 @@ jobs:
                 echo "path is : ${PATH}"
                 echo "github path is : ${GITHUB_PATH}"
                 sf --version
+                
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '21'
 
       - name:  Setup PMD Scanner
         run: |
