@@ -33,7 +33,7 @@ jobs:
       - name:  Run PMD Scanner
         run: |
            #sf scanner run --target force-app --outfile --help
-           sf scanner run --target force-app --format html --outfile results
+           sf scanner run --target force-app --format html --outfile results.html
            ls -al
 
       - name: Upload PMD Scanner reports
